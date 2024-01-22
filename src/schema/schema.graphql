@@ -2,21 +2,11 @@ input contactUsInput {
   firstName: String!
   lastName: String!
   email: String!
-  contactNumber: String!
-  officeAddress: String!
+  Industry: String!
+  Applications: String!
   emailMessage: String!
 }
 
-type contactUsOutput {
-  success: Boolean
-  message: String
-  status: Int
-}
-
-type contactUs {
-  contactUs: contactUsOutput
-}
-
 extend type Mutation {
-  contactUs(input: contactUsInput!): contactUs
+  contactUs(input: contactUsInput!): Boolean
 }
