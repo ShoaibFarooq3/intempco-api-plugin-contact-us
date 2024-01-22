@@ -1,6 +1,6 @@
 import { createRequire } from "module";
 import importAsString from "@reactioncommerce/api-utils/importAsString.js";
-import resolvers from "./resolver/resolver.js";
+import resolvers from "./resolvers/resolvers.js";
 const schemas = importAsString("./schema/schema.graphql");
 const require = createRequire(import.meta.url);
 const pkg = require("../package.json");
