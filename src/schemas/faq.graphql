@@ -1,0 +1,39 @@
+type faq {
+  _id: ID!
+  question: String
+  answer: String
+  description: String
+  tagTitle: String
+  tagIds: [String]
+  isDeleted: Boolean
+  isVisible: Boolean
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+input faqInput {
+  question: String
+  answer: String
+  description: String
+  tagTitle: String
+  tagIds: [String]
+  isDeleted: Boolean
+  isVisible: Boolean
+}
+type FaqPayload {
+  totalCount: Int
+  Faqs: [faq]
+}
+type Mutation {
+  createFaq(input: faqInput): faq
+}
+
+type Query {
+  getAllFaqs(
+    itemPerPage: Int
+    PageNumber: Int
+    tagIds: [String]
+    searchQuery: String
+  ): FaqPayload
+  getFaqsById(_id: ID!): faq
+}
