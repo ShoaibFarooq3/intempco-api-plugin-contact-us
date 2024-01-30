@@ -42,9 +42,9 @@ export default async function updateFaq(context, input) {
   if (isVisible) {
     currentProduct.isVisible = isVisible;
   }
-  //   if (tagIds.length>0) {
-  //     currentProduct.tagIds=
-  //   }
+  if (tagIds && tagIds.length > 0) {
+    currentProduct.tagIds = tagIds;
+}
   currentProduct.updatedAt = new Date();
   console.log("current updated product", currentProduct);
   let updatedFaqResp = await Faqs.findOneAndUpdate(
