@@ -1,5 +1,6 @@
 import ReactionError from "@reactioncommerce/reaction-error";
 import ObjectID from "mongodb";
+import { decodeTagOpaqueId } from "../xforms/id.js";
 
 export default async function deleteFaq(context, args) {
   console.log("args in mutations:- ", args);
@@ -24,7 +25,7 @@ export default async function deleteFaq(context, args) {
   if (!account) throw new ReactionError("not-found", "No account found");
   let updateResponse = await Faqs.findOneAndUpdate(
     {
-      _id: new ObjectID.ObjectId(_id),
+      _id: decodeTagOpaqueId(_id),
     },
     {
       $set: updateData, // fields to update
