@@ -12,7 +12,7 @@ export default async function getAllFaqs(context, args) {
   }
   let { itemPerPage, PageNumber, tagIds, searchQuery } = args;
   let filters = { isVisible: true };
-  console.log("encodeTagOpaqueId(tagIds)", decodeTagOpaqueId(tagIds));
+  // console.log("encodeTagOpaqueId(tagIds)", decodeTagOpaqueId(tagIds));
   // if (tagIds) {
   //   filters.tagIds = { $in: encodeTagOpaqueId(tagIds) };
   // }
