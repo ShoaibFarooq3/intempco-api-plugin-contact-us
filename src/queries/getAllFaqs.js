@@ -7,9 +7,9 @@ export default async function getAllFaqs(context, args) {
     collections: { Faqs },
     userId,
   } = context;
-  if (!userId) {
-    throw new ReactionError("access-denied", "Please login first");
-  }
+  // if (!userId) {
+  //   throw new ReactionError("access-denied", "Please login first");
+  // }
   let { itemPerPage, PageNumber, tagIds, searchQuery } = args;
   let filters = { isVisible: true };
   // console.log("encodeTagOpaqueId(tagIds)", decodeTagOpaqueId(tagIds));
