@@ -2,7 +2,7 @@
   "name": "@codistan-isb/intempco-api-plugin-contact-us",
   "description": "Plugin for contact us form",
   "label": "ContactUs Plugin",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "main": "index.js",
   "type": "module",
   "engines": {
