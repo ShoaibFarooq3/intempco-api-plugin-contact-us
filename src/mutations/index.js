@@ -1,10 +1,14 @@
 import contactUs from './contactUs.js';
 import createFaq from './createFaq.js';
 import deleteFaq from './deleteFaq.js';
-import updateFaq from './updateFaq.js'
+import updateFaq from './updateFaq.js';
+import createContactDetails from './createContactDetails.js';
+import updateContactDetails from './updateContactDetails.js';
 export default{
     contactUs,
     createFaq,
     deleteFaq,
-    updateFaq
+    updateFaq,
+    createContactDetails,
+    updateContactDetails
 }
