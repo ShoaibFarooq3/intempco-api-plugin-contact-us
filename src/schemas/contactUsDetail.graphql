@@ -35,6 +35,7 @@ type Mutation {
     input: contactDetailsInput
     _id: ID!
   ): updateContactDetailPayload
+  deleteContactDetails(_id:ID!): Boolean
 }
 type Query {
   listContactDetails(itemPerPage: Int, PageNumber: Int): ListContactPayload
