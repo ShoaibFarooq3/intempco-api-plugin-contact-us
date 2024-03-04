@@ -34,6 +34,11 @@ export default async function register(app) {
         updatedAt: { type: Date, default: Date.now },
         createdAt: { type: Date, default: Date.now },
       },
+      CompanyDirectory: {
+        name: "CompanyDirectory",
+        updatedAt: { type: Date, default: Date.now },
+        createdAt: { type: Date, default: Date.now },
+      },
     },
     graphQL: {
       // schemas: [schemas],
