@@ -2,7 +2,7 @@ import { decodeTagOpaqueId, encodeProductOpaqueId } from "../xforms/id.js";
 import ReactionError from "@reactioncommerce/reaction-error";
 
 export default async function getAllFaqs(context, args) {
-  console.log("here args", args);
+  // console.log("here args", args);
   const {
     collections: { Faqs },
     userId,
@@ -26,7 +26,7 @@ export default async function getAllFaqs(context, args) {
       { description: { $regex: searchQuery, $options: "i" } },
     ];
   }
-  console.log("filters", filters);
+  // console.log("filters", filters);
 
   let itemsPerPage = itemPerPage ? itemPerPage : 10; // Number of items to display per page
   PageNumber = PageNumber ? PageNumber : 1;
